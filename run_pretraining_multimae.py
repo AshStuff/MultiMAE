@@ -317,7 +317,7 @@ def main(args):
         loss_balancer = UncertaintyWeightingStrategy(tasks=args.out_domains)
     else:
         loss_balancer = NoWeightingStrategy()
-
+    import pdb;pdb.set_trace()
     tasks_loss_fn = {
         domain: DOMAIN_CONF[domain]['loss'](patch_size=args.patch_size, stride=DOMAIN_CONF[domain]['stride_level'])
         for domain in args.out_domains
