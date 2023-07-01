@@ -133,7 +133,6 @@ def create_optimizer(args, model, get_num_layer=None, get_layer_scale=None, filt
             parameters = m.parameters()
             wd = weight_decay
         return parameters, wd
-    import pdb;pdb.set_trace()
     if isinstance(model, torch.nn.Module):
         parameters, weight_decay = get_parameters(model)
     elif isinstance(model, dict):
